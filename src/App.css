@@ -1,0 +1,87 @@
+main {
+  position: relative;
+  background-color: var(--bg-color);
+  z-index: 500;
+}
+
+section {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  position: relative;
+  background-color: var(--section-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  z-index: 10;
+  overflow: visible;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.conversion {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  /* width: min(100%, 500px); */
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  .currency-from {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-align: right;
+    flex-grow: 1;
+  }
+  .currency-to {
+    font-size: 2.5rem;
+    font-weight: 600;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+.input-from-group,
+.input-to-group {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1rem;
+  border-radius: 10rem;
+  transition: 0.3s ease-in-out;
+  border: 2px solid var(--input-color);
+
+  &:has(input:focus) {
+    border: 2px solid var(--accent);
+    box-shadow: var(--shadow);
+  }
+
+  input {
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    border-radius: 10rem 0 0 10rem;
+  }
+
+  .separator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: calc(100% - 1rem);
+    background-color: var(--light-gray);
+    z-index: 200;
+  }
+}

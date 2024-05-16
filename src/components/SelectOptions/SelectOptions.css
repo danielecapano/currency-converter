@@ -1,0 +1,42 @@
+.option-wrap {
+  height: 0;
+  overflow: auto;
+  position: absolute;
+  z-index: 1000;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 50%;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease-in-out;
+
+  &.open {
+    height: 350px;
+  }
+}
+
+.option {
+  background-color: var(--input-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+
+  .option-item {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background-color: var(--light-gray);
+    }
+  }
+}
