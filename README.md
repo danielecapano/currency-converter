@@ -2,7 +2,8 @@
 
 Currency Converter è un'applicazione sviluppata in React con Vite, progettata per aiutarti a convertire valute in modo semplice e veloce, oltre a visualizzare l'andamento dei tassi di cambio nel tempo.
 
-![Currency Converter Screenshot](./path-to-image-file.png)
+![Currency Converter Screenshot Dark Theme](./screen-dark.png)
+![Currency Converter Screenshot Dark Theme](./screen-light.png)
 
 ## Caratteristiche
 
